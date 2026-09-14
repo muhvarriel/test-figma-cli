@@ -162,7 +162,7 @@ Skills berikut tersedia langsung di `.agents/skills/`:
 
 ## 6. Git Workflow & Aturan Commit-Push Tiap Task
 
-Repositori ini terhubung ke GitHub private repository:
+Repositori ini terhubung ke GitHub repository:
 1. **Otomasi Commit & Push per Task**:
    - Setiap kali satu langkah/fase tugas dalam `TASKS.md` selesai dikerjakan, agent **wajib** langsung membuat commit dan melakukan push ke branch remote:
      ```bash
