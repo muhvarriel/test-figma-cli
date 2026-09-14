@@ -4,22 +4,24 @@ Repositori ini berfokus pada otomasi eksplorasi desain Figma menggunakan **`figm
 
 ---
 
-## 📌 Alur Kerja / Tracks
+## Alur Kerja / Tracks
 
-Repositori ini dibagi menjadi dua track tugas utama:
+Repositori ini dibagi menjadi dua track tugas utama berdasarkan file Figma yang aktif:
 
 ### 1. [`view-and-create/`](file:///view-and-create)
+- **Target File Figma**: `Untitled` (`https://www.figma.com/design/MMv9N0JTRXhlTMuwr91B9Q/Untitled`)
 - **Tujuan**: Membangun desain UI mobile dari kanvas kosong di Figma secara terprogram menggunakan `figma-cli render` dan variabel token.
-- **Standar Desain**: Mengikuti prinsip [`frontend-design`](file:///.agents/skills/frontend-design/SKILL.md) untuk menciptakan tampilan yang berkarakter, palet warna kohesif (4–6 hex), tipografi kontras, dan signature element (menghindari template AI generik).
+- **Standar Desain**: Mengikuti prinsip [`frontend-design`](file:///.agents/skills/frontend-design/SKILL.md) untuk menciptakan tampilan yang berkarakter, palet warna kohesif (4-6 hex), tipografi kontras, dan signature element (menghindari template AI generik).
 - **Slicing Flutter**: Mengimplementasikan UI ke dalam project Flutter modern sesuai prinsip [`flutter-expert`](file:///.agents/skills/flutter-expert/SKILL.md).
 
 ### 2. [`view-only/`](file:///view-only)
-- **Tujuan**: Menerima file desain Figma yang sudah ada (status view-only), menginspeksi dan mengekstrak spesifikasi lengkap (`DESIGN.md`, DTCG design tokens JSON, screenshot acuan) menggunakan `figma-cli extract` dan `export`.
-- **Slicing Flutter**: Melakukan slicing murni (pixel-perfect) ke Flutter yang 100% presisi sesuai spesifikasi layout, spacing, dan styling yang diekstrak.
+- **Target File Figma**: `DANONE - AQUA APP` (`https://www.figma.com/design/caXZZxc1CP2MhfexwEUjin/DANONE---AQUA-APP`)
+- **Tujuan**: Menginspeksi dan mengekstrak spesifikasi lengkap (`DESIGN.md`, DTCG design tokens JSON, screenshot acuan) menggunakan `figma-cli extract` dan `export`.
+- **Slicing Flutter**: Melakukan slicing murni (pixel-perfect) ke Flutter yang presisi sesuai spesifikasi layout, spacing, dan styling yang diekstrak.
 
 ---
 
-## 🗂️ Struktur Direktori
+## Struktur Direktori
 
 ```text
 .
@@ -38,7 +40,7 @@ Repositori ini dibagi menjadi dua track tugas utama:
 
 ---
 
-## ⚙️ Prasyarat & Lingkungan
+## Prasyarat & Lingkungan
 
 - **Node.js**: v24.20.0 (via NVM)
 - **Figma CLI (`figma-cli`)**: Ter-install secara global (`/Users/macbook/.nvm/versions/node/v24.20.0/bin/figma-cli`)
@@ -47,18 +49,20 @@ Repositori ini dibagi menjadi dua track tugas utama:
 
 ---
 
-## 🚀 Panduan Memulai
+## Panduan Memulai
 
-### 1. Cek Koneksi Figma CLI
-Jalankan diagnosa koneksi antara CLI dan Figma:
+### 1. Status Koneksi Figma CLI
+Koneksi ke Figma Desktop menggunakan direct CDP (port 9222) dan speed daemon (port 3456):
 ```bash
 figma-cli diagnose
 ```
-Untuk menghubungkan ke Figma Desktop yang sedang aktif:
+Untuk menginisialisasi atau memperbarui koneksi:
 ```bash
-figma-cli connect --safe     # Safe Mode via plugin
-# atau
-figma-cli connect --browser  # Browser Mode via CDP
+figma-cli connect
+```
+Melihat daftar file yang sedang terbuka:
+```bash
+figma-cli files
 ```
 
 ### 2. Menjalankan Task
@@ -66,9 +70,9 @@ Lihat checklist lengkap dan tahapan pengerjaan di file [`TASKS.md`](file:///TASK
 
 ---
 
-## 🔄 Aturan Git & Commit-Push
+## Aturan Git & Commit-Push
 
-Sesuai aturan di [`AGENTS.md`](file:///AGENTS.md), setiap tahapan atau fase pengerjaan yang selesai dikerjakan **wajib** langsung di-commit dan di-push ke remote repository `main` menggunakan konvensi Conventional Commits:
+Sesuai aturan di [`AGENTS.md`](file:///AGENTS.md), setiap tahapan atau fase pengerjaan yang selesai dikerjakan wajib langsung di-commit dan di-push ke remote repository `main` menggunakan konvensi Conventional Commits:
 - `design(...)`: Perubahan atau penambahan desain di Figma.
 - `feat(...)`: Fitur baru, widget, atau slicing Flutter.
 - `docs(...)`: Dokumentasi (`README.md`, `AGENTS.md`, `TASKS.md`).

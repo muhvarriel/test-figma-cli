@@ -13,6 +13,10 @@ Tool `figma-cli` sudah ter-install secara global di sistem:
 
 ### Diagnostik & Koneksi ke Figma
 
+Status koneksi aktif saat ini:
+- **Metode Koneksi**: Direct CDP (port 9222) via `figma-cli connect`
+- **Speed Daemon**: Aktif di port 3456 (akselerasi eksekusi ~10x lebih cepat)
+
 Sebelum menjalankan operasi yang membutuhkan interaksi langsung dengan canvas Figma:
 1. **Periksa status koneksi**:
    ```bash
@@ -23,12 +27,27 @@ Sebelum menjalankan operasi yang membutuhkan interaksi langsung dengan canvas Fi
    figma-cli connect [options]
    ```
    - Opsi koneksi:
-     - `--safe`: Menjalankan Safe Mode via plugin tanpa perlu modifikasi app.
-     - `--browser`: Menjalankan Browser Mode (Chromium via CDP) untuk Figma di browser.
+     - `figma-cli connect`: Menjalankan Yolo Mode (Direct CDP port 9222).
+     - `--safe`: Menjalankan Safe Mode via plugin tanpa modifikasi app.
+     - `--browser`: Menjalankan Browser Mode (Chromium via CDP).
 3. **Cek file yang sedang terbuka**:
    ```bash
    figma-cli files
    ```
+
+### Pemetaan File Figma yang Terhubung
+
+Saat ini terdapat 2 file yang terhubung di Figma Desktop:
+1. **`Untitled`**
+   - **URL**: `https://www.figma.com/design/MMv9N0JTRXhlTMuwr91B9Q/Untitled`
+   - **Halaman**: `TableDash · Mobile Self Ordering` (atau canvas kosong)
+   - **Target Track**: [`view-and-create/`](file:///Users/macbook/Developer/WorkingSpace/RollingGlory/test-figma-cli/view-and-create) (Tempat merancang UI baru dari nol).
+2. **`DANONE - AQUA APP`**
+   - **URL**: `https://www.figma.com/design/caXZZxc1CP2MhfexwEUjin/DANONE---AQUA-APP`
+   - **Target Track**: [`view-only/`](file:///Users/macbook/Developer/WorkingSpace/RollingGlory/test-figma-cli/view-only) (File acuan untuk diekstrak dan di-slicing ke Flutter).
+
+> [!NOTE]
+> `figma-cli` mengeksekusi perintah pada tab file Figma yang sedang aktif/fokus di Figma Desktop. Pastikan tab file yang sesuai sedang terbuka dan fokus sebelum menjalankan perintah `render` atau `extract`.
 
 ---
 

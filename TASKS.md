@@ -9,9 +9,10 @@ Roadmap dan daftar tugas untuk pengerjaan project mobile Flutter menggunakan `fi
 
 ## Track 1: `view-and-create`
 Lokasi direktori: `[view-and-create/](file:///Users/macbook/Developer/WorkingSpace/RollingGlory/test-figma-cli/view-and-create)`
+Target File Figma: `Untitled` (`https://www.figma.com/design/MMv9N0JTRXhlTMuwr91B9Q/Untitled`)
 
 ### Deskripsi
-Tugas ini dimulai dari canvas kosong di Figma. Agent merancang UI mobile app menggunakan `figma-cli` dengan menerapkan prinsip desain non-generik dan berkarakter, kemudian mengimplementasikan desain tersebut ke dalam project Flutter modern.
+Tugas ini dimulai dari canvas kosong di Figma pada file `Untitled`. Agent merancang UI mobile app menggunakan `figma-cli` dengan menerapkan prinsip desain non-generik dan berkarakter, kemudian mengimplementasikan desain tersebut ke dalam project Flutter modern.
 
 ### Checklist Pengerjaan
 
@@ -19,7 +20,7 @@ Tugas ini dimulai dari canvas kosong di Figma. Agent merancang UI mobile app men
 - [ ] Tentukan subjek dan domain aplikasi (misal: Modern Coffee Roastery, Personal Finance Tracker, Artisan Plant Care).
 - [ ] Tentukan target audiens dan single job dari layar utama.
 - [ ] Buat sistem token visual:
-  - **Palet Warna**: 4–6 nilai hex spesifik dengan kontras optimal (background, surface, primary, accent, text primary, text secondary).
+  - **Palet Warna**: 4-6 nilai hex spesifik dengan kontras optimal (background, surface, primary, accent, text primary, text secondary).
   - **Tipografi**: Pasangan font display dan body (misal: Plus Jakarta Sans / Outfit / Inter) dengan type scale terukur.
   - **Signature Element**: 1 elemen unik yang menjadi ciri khas identitas visual (misal: custom progress ring, asymmetric card treatment, dynamic pill selector).
   - **Copywriting**: Menggunakan active voice dan istilah yang familiar bagi pengguna.
@@ -115,17 +116,17 @@ Tugas ini dimulai dari canvas kosong di Figma. Agent merancang UI mobile app men
 
 ## Track 2: `view-only`
 Lokasi direktori: `[view-only/](file:///Users/macbook/Developer/WorkingSpace/RollingGlory/test-figma-cli/view-only)`
+Target File Figma: `DANONE - AQUA APP` (`https://www.figma.com/design/caXZZxc1CP2MhfexwEUjin/DANONE---AQUA-APP`)
 
 ### Deskripsi
-Tugas ini berfokus pada slicing murni dari file Figma yang sudah ada (berstatus view-only). Agent mengekstrak struktur desain, token warna, typography, dan aset menggunakan `figma-cli`, kemudian menyusun aplikasi Flutter yang 100% presisi sesuai desain Figma.
+Tugas ini berfokus pada slicing murni dari file Figma `DANONE - AQUA APP` yang berstatus view-only. Agent mengekstrak struktur desain, token warna, typography, dan aset menggunakan `figma-cli`, kemudian menyusun aplikasi Flutter yang presisi sesuai desain Figma.
 
 ### Checklist Pengerjaan
 
 #### 1. Inspeksi & Ekstraksi Desain via `figma-cli`
-- [ ] Buka file Figma target di Figma Desktop / Browser.
-- [ ] Hubungkan `figma-cli` ke sesi aktif:
+- [ ] Buka dan pastikan tab `DANONE - AQUA APP` aktif di Figma Desktop.
+- [ ] Verifikasi file terdeteksi via `figma-cli files`:
   ```bash
-  figma-cli connect --safe
   figma-cli files
   ```
 - [ ] Ekstrak spesifikasi lengkap desain ke dalam `DESIGN.md`:
