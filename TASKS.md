@@ -208,3 +208,35 @@ Tugas ini berfokus pada slicing murni dari file Figma `DANONE - AQUA APP` yang b
   git commit -m "test(view-only): complete visual QA and tests"
   git push origin main
   ```
+
+---
+
+## Fase Akhir: Penyusunan Laporan & Tutorial
+Lokasi file: `[REPORT.md](file:///Users/macbook/Developer/WorkingSpace/RollingGlory/test-figma-cli/REPORT.md)` dan `[TUTORIAL.md](file:///Users/macbook/Developer/WorkingSpace/RollingGlory/test-figma-cli/TUTORIAL.md)`
+
+### Deskripsi
+Setelah seluruh task di Track 1 (`view-and-create`) dan Track 2 (`view-only`) selesai dikerjakan dan diverifikasi, agent wajib menyusun dokumentasi komprehensif berupa laporan evaluasi hasil eksperimen (`REPORT.md`) dan tutorial panduan teknis langkah-demi-langkah (`TUTORIAL.md`).
+
+### Checklist Pengerjaan
+
+#### 1. Penyusunan REPORT.md
+- [ ] Ringkasan eksekutif eksperimen figma-cli dan Flutter slicing.
+- [ ] Evaluasi Track 1 (`view-and-create`): efektivitas pembuatan desain terprogram via figma-cli render, penerapan token, dan hasil slicing Flutter.
+- [ ] Evaluasi Track 2 (`view-only`): akurasi ekstraksi spesifikasi DESIGN.md, tokens, aset visual, dan presisi slicing Flutter.
+- [ ] Analisis performa, kendala teknis yang dihadapi, solusi pemecahan masalah, dan rekomendasi perbaikan.
+- [ ] Perbandingan efisiensi alur kerja: mendesain via CLI vs mengekstrak file yang sudah ada.
+
+#### 2. Penyusunan TUTORIAL.md
+- [ ] Panduan instalasi dan setup awal (Node.js, figma-cli, Flutter, CDP connection port 9222, speed daemon).
+- [ ] Tutorial Alur 1: Membuat UI mobile dari nol di Figma menggunakan JSX, auto-layout, styling, dan variables via figma-cli.
+- [ ] Tutorial Alur 2: Menghubungkan ke file Figma view-only, mengekstrak DESIGN.md, mengekspor token warna/typography, dan mengekspor aset PNG/SVG.
+- [ ] Tutorial Alur 3: Slicing desain ke Flutter (setup arsitektur, mapping theme tokens, pembuatan reusable widgets, dan penanganan layout responsif).
+- [ ] Tutorial Alur 4: Otomasi commit dan push ke GitHub per task completion.
+
+#### 3. Commit & Push Dokumen Akhir
+- [ ] **Commit & Push REPORT.md dan TUTORIAL.md**:
+  ```bash
+  git add REPORT.md TUTORIAL.md TASKS.md
+  git commit -m "docs: add comprehensive REPORT.md and TUTORIAL.md"
+  git push origin main
+  ```

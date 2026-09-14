@@ -35,8 +35,18 @@ Repositori ini dibagi menjadi dua track tugas utama berdasarkan file Figma yang 
 ├── .gitignore                 # Konfigurasi ignore file OS dan build Flutter
 ├── AGENTS.md                  # Panduan AI Agent, setup figma-cli & standar slicing
 ├── README.md                  # Dokumentasi umum repositori
-└── TASKS.md                   # Roadmap tugas & checklist pengerjaan per track
+├── REPORT.md                  # Laporan evaluasi dan temuan komprehensif (setelah semua task selesai)
+├── TASKS.md                   # Roadmap tugas & checklist pengerjaan per track
+└── TUTORIAL.md                # Panduan teknis langkah-demi-langkah (setelah semua task selesai)
 ```
+
+---
+
+## Dokumentasi Akhir Proyek
+
+Setelah seluruh task pada Track 1 dan Track 2 tuntas diselesaikan dan divalidasi, repositori ini akan dilengkapi dengan:
+1. **`[REPORT.md](file:///REPORT.md)`**: Laporan evaluasi komparatif antara perancangan via figma-cli vs ekstraksi file acuan, performa, kendala, dan rekomendasi teknis.
+2. **`[TUTORIAL.md](file:///TUTORIAL.md)`**: Panduan teknis lengkap yang dapat direplikasi untuk menghubungkan Figma Desktop via CDP, mendesain UI via CLI, mengekstrak token/desain, dan melakukan slicing Flutter.
 
 ---
 

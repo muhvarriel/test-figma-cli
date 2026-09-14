@@ -179,3 +179,31 @@ Repositori ini terhubung ke GitHub private repository:
 3. **Integritas Repository**:
    - Pastikan file build sementara Flutter (`build/`, `.dart_tool/`) dan sistem OS (`.DS_Store`) tidak ter-commit (selalu patuhi `.gitignore`).
    - Sebelum memulai task baru, pastikan branch lokal bersih (`git status`).
+
+---
+
+## 7. Kewajiban Pembuatan Dokumen Akhir (REPORT.md & TUTORIAL.md)
+
+Setelah semua checklist dan tahapan tugas dalam `TASKS.md` selesai dikerjakan dan diverifikasi (baik Track 1 maupun Track 2), agent **wajib** menyusun dua dokumen penutup sebelum pekerjaan dinyatakan tuntas:
+
+1. **`REPORT.md`**:
+   - Ringkasan eksekutif eksperimen `figma-cli` dan implementasi slicing ke Flutter.
+   - Evaluasi komparatif Track 1 (`view-and-create`) vs Track 2 (`view-only`).
+   - Analisis performa, kendala teknis yang dihadapi, solusi pemecahan masalah, dan temuan penting.
+   - Penilaian kesesuaian hasil terhadap aturan desain (`frontend-design`) dan arsitektur Flutter (`flutter-expert`).
+
+2. **`TUTORIAL.md`**:
+   - Panduan teknis praktis langkah-demi-langkah yang dapat direplikasi oleh developer lain.
+   - Cara setup lingkungan, CDP debugging, dan daemon `figma-cli`.
+   - Tutorial alur membuat desain mobile dari nol di Figma menggunakan JSX syntax dan token variabel.
+   - Tutorial alur inspeksi dan ekstraksi file Figma view-only (`DESIGN.md`, tokens, aset gambar).
+   - Tutorial alur slicing Flutter yang modular, responsif, dan clean.
+   - Panduan penerapan Git workflow commit-push otomatis.
+
+3. **Commit & Push Dokumen Akhir**:
+   - Segera setelah kedua dokumen selesai disusun, lakukan commit dan push ke repository:
+     ```bash
+     git add REPORT.md TUTORIAL.md TASKS.md
+     git commit -m "docs: add comprehensive REPORT.md and TUTORIAL.md"
+     git push origin main
+     ```
